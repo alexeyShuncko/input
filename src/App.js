@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import './App.scss';
+import ModalForm from './components/MyModal';
 
 function App() {
 
 
   const [value, setValue] = useState('')
   const [edit, setEdit] = useState(false)
+  const [modal, setModal] = useState(false)
 
 
   const mySubmit = (e) => {
@@ -21,7 +23,10 @@ function App() {
         body: JSON.stringify(data)
       })
       .then(res=> res.json())
-      .then(data=> console.log(data))
+      .then(data=> {
+        setModal(true)
+        setValue('')
+      })
     }
   }
 
@@ -32,6 +37,7 @@ function App() {
   }
 
   return (
+    <>
     <form className='container' onSubmit={mySubmit}>
       <input placeholder='Ваш номер...' value={value} onChange={changeHandler} />
       {edit &&
@@ -39,6 +45,9 @@ function App() {
       }
       <button ><span>Заказать</span></button>
     </form>
+    {modal && <ModalForm setModal={setModal} />}
+    </>
+    
   );
 }
 

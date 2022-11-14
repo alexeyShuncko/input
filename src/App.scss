@@ -25,6 +25,7 @@ body {
         text-transform: uppercase;
         cursor: pointer;
         transform: skew(-45deg);
+
         span {
             display: block;
             transform: skew(45deg);
@@ -45,5 +46,64 @@ body {
         margin-left: 70px;
         letter-spacing: 1px;
         color: $primaryColor;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+    animation: visibl 0.5s;
+}
+
+.content {
+    display: flex;
+    width: 320px;
+    height: 150px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 200px auto;
+    padding: 10px 20px;
+    background: #23242e;
+    border-radius: 8px;
+    color: green;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid green;
+    animation: visibl 0.5s;
+
+    button {
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        font-weight: 600;
+        background: #ccc;
+        padding: 15px 20px;
+        border-radius: 5px;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: 0.25s;
+
+        &:hover {
+            letter-spacing: 2px;
+            background-color: green;
+            box-shadow: 0 0 10px green, 0 0 20px green, 0 0 50px green;
+            color: #fff;
+        }
+    }
+}
+
+@keyframes visibl {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
