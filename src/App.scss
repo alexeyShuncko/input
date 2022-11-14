@@ -1,0 +1,44 @@
+$primaryColor: red;
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #23242e;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+   
+    button {
+        position: absolute;
+        top: 0;
+        left: 500px;
+        padding: 20px 70px;
+        background: $primaryColor;
+        color: #fff;
+        outline: none;
+        border: 2px solid #fff;
+        font-size: 1.2em;
+        cursor: pointer;
+        transform: skew(-45deg);
+        span {
+            display: block;
+            transform: skew(45deg);
+        }
+};
+        
+    
+    input {
+        min-width: 400px;
+        padding: 20px 70px;
+        outline: none;
+        background: #ccc;
+        border: 2px solid #fff;
+        font-size: 1.2em;
+        clip-path: polygon(14% 0, 100% 0, 86% 100%, 0% 100%);
+       
+}  
+}
