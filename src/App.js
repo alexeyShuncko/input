@@ -15,7 +15,13 @@ function App() {
       document.querySelector('input').focus()
     }
     else {
-
+      const data = {number: value}
+      fetch('https://jsonplaceholder.typicode.com/posts',{
+        method: 'POST',
+        body: JSON.stringify(data)
+      })
+      .then(res=> res.json())
+      .then(data=> console.log(data))
     }
   }
 
