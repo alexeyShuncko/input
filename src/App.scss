@@ -11,7 +11,7 @@ body {
 
 .container {
     position: relative;
-   
+
     button {
         position: absolute;
         top: 0;
@@ -28,9 +28,8 @@ body {
             display: block;
             transform: skew(45deg);
         }
-};
-        
-    
+    }
+
     input {
         min-width: 400px;
         padding: 20px 70px;
@@ -39,6 +38,10 @@ body {
         border: 2px solid #fff;
         font-size: 1.2em;
         clip-path: polygon(14% 0, 100% 0, 86% 100%, 0% 100%);
-       
-}  
+    }
+
+    .message {
+        margin-left: 70px;
+        color: $primaryColor;
+    }
 }
