@@ -14,9 +14,10 @@ body {
 
     button {
         position: absolute;
+        display: flex;
         top: 0;
         left: 500px;
-        padding: 20px 70px;
+        padding: 20px 50px 20px 70px;
         background: $primaryColor;
         color: #fff;
         outline: none;
@@ -25,11 +26,13 @@ body {
         text-transform: uppercase;
         cursor: pointer;
         transform: skew(-45deg);
-
         span {
             display: block;
-            transform: skew(45deg);
-        }
+            transform: skew(45deg); 
+            i {
+                margin-left: 10px;
+            } 
+        }        
     }
 
     input {

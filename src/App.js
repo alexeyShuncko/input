@@ -17,6 +17,8 @@ function App() {
       document.querySelector('input').focus()
     }
     else {
+      const icon = document.querySelector('i')
+      icon.classList.add('fa-spin')
       const data = {number: value}
       fetch('https://jsonplaceholder.typicode.com/posts',{
         method: 'POST',
@@ -26,6 +28,7 @@ function App() {
       .then(data=> {
         setModal(true)
         setValue('')
+        icon.classList.remove('fa-spin')
       })
     }
   }
@@ -43,9 +46,10 @@ function App() {
       {edit &&
         <div className='message'>Поле не должно быть пустым!</div>
       }
-      <button ><span>Заказать</span></button>
+      <button><span>Заказать</span><span><i className="fa fa-spinner"></i></span></button>
     </form>
     {modal && <ModalForm setModal={setModal} />}
+    
     </>
     
   );
