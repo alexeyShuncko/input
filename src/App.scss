@@ -27,13 +27,15 @@ body {
         text-transform: uppercase;
         cursor: pointer;
         transform: skew(-45deg);
+
         span {
             display: block;
-            transform: skew(45deg); 
+            transform: skew(45deg);
+
             i {
                 margin-left: 10px;
-            } 
-        }        
+            }
+        }
     }
 
     input {
@@ -117,19 +119,23 @@ body {
         position: relative;
         display: flex;
         margin: 0;
+
         button {
             position: static;
             padding: 20px;
             transform: skew(0deg);
+
             span {
                 transform: skew(0deg)
             }
         }
+
         input {
-            padding: 20px; 
+            padding: 20px;
             width: 120px;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
+
         .message {
             position: absolute;
             top: 70px;

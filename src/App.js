@@ -43,16 +43,14 @@ function App() {
     <>
     <form className='container' onSubmit={mySubmit}>
       <input placeholder='Ваш номер...' value={value} onChange={changeHandler} />
-      <button><span>Заказать</span><span><i className="fa fa-spinner"></i></span></button>
+      <button><span>Заказать</span><span><i className='fa fa-spinner'></i></span></button>
       {edit &&
         <div className='message'>Поле не должно быть пустым!</div>
       }
     </form>
-    {modal && <ModalForm setModal={setModal} />}
-    
-    </>
-    
-  );
+    {modal && <ModalForm setModal={setModal} />} 
+    </> 
+  )
 }
 
 export default App;

@@ -1,5 +1,3 @@
-import React from "react";
-
 
 
 const ModalForm = ({setModal }) => {
@@ -20,6 +18,5 @@ const ModalForm = ({setModal }) => {
             </div>
         </div>
     )
-
 }
 export default ModalForm
