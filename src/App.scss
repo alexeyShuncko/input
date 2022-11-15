@@ -11,12 +11,13 @@ body {
 
 .container {
     position: relative;
+    margin-right: 200px;
 
     button {
         position: absolute;
         display: flex;
         top: 0;
-        left: 500px;
+        left: 400px;
         padding: 20px 50px 20px 70px;
         background: $primaryColor;
         color: #fff;
@@ -36,13 +37,13 @@ body {
     }
 
     input {
-        min-width: 400px;
+        width: 290px;
         padding: 20px 70px;
         outline: none;
         background: #ccc;
         border: 2px solid #fff;
         font-size: 1.2em;
-        clip-path: polygon(14% 0, 100% 0, 86% 100%, 0% 100%);
+        clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
     }
 
     .message {
@@ -108,5 +109,31 @@ body {
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        position: relative;
+        display: flex;
+        margin: 0;
+        button {
+            position: static;
+            padding: 20px;
+            transform: skew(0deg);
+            span {
+                transform: skew(0deg)
+            }
+        }
+        input {
+            padding: 20px; 
+            width: 120px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        .message {
+            position: absolute;
+            top: 70px;
+            left: -65px;
+        }
     }
 }
